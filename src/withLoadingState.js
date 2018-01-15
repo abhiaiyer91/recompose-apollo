@@ -18,9 +18,9 @@ export function withLoadingState(Component) {
     renderComponent(Component),
     withPropsOnChange(["networkStatus"], ({ networkStatus }) => {
       return {
-        activelyRefetching: activelyRefetching(props.networkStatus),
-        passivelyRefetching: passivelyRefetching(props.networkStatus),
-        fetchingMore: fetchingMore(props.networkStatus)
+        activelyRefetching: activelyRefetching(networkStatus),
+        passivelyRefetching: passivelyRefetching(networkStatus),
+        fetchingMore: fetchingMore(networkStatus)
       };
     })
   );
