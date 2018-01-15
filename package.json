@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "author": "Abhi Aiyer",
   "license": "MIT",
-  "module": "src/index.js",
+  "module": "lib/es/index.js",
   "peerDependencies": {
     "react-apollo": "2.0.4",
     "recompose": "0.26.0"
