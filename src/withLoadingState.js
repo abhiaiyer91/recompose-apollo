@@ -1,14 +1,13 @@
-import { branch, renderComponent, withPropsOnChange } from "recompose";
+import { branch, renderComponent, withPropsOnChange } from 'recompose';
 
 // Loading States
-const initialLoading = networkStatus => networkStatus === 1;
-const activelyRefetching = networkStatus => networkStatus === 4;
-const passivelyRefetching = networkStatus =>
-  networkStatus === 2 || networkStatus === 6;
-const fetchingMore = networkStatus => networkStatus === 3;
+const initialLoading = (networkStatus) => { return networkStatus === 1; };
+const activelyRefetching = (networkStatus) => { return networkStatus === 4; };
+const passivelyRefetching = (networkStatus) =>  { return networkStatus === 2 || networkStatus === 6; };
+const fetchingMore = (networkStatus) => { return networkStatus === 3; };
 
 // Error States
-const hasErrored = networkStatus => networkStatus === 8;
+const hasErrored = (networkStatus) => { return networkStatus === 8; };
 
 export function withLoadingState(Component) {
   return branch(
@@ -16,11 +15,11 @@ export function withLoadingState(Component) {
       return initialLoading(networkStatus);
     },
     renderComponent(Component),
-    withPropsOnChange(["networkStatus"], ({ networkStatus }) => {
+    withPropsOnChange(['networkStatus'], ({ networkStatus }) => {
       return {
         activelyRefetching: activelyRefetching(networkStatus),
         passivelyRefetching: passivelyRefetching(networkStatus),
-        fetchingMore: fetchingMore(networkStatus)
+        fetchingMore: fetchingMore(networkStatus),
       };
     })
   );

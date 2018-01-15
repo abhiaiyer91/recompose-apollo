@@ -13,7 +13,8 @@
   "scripts": {
     "build": "rollup -c rollup.config.js",
     "prepublish": "npm run build",
-    "release": "standard-version"
+    "release": "standard-version",
+    "lint:fix": "eslint . --fix"
   },
   "bundlesize": [
     {
@@ -31,6 +32,8 @@
     "react"
   ],
   "devDependencies": {
+    "@workpop/eslint-config-workpop": "^1.0.0",
+    "eslint": "^3.3.1",
     "babel-plugin-transform-export-extensions": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",

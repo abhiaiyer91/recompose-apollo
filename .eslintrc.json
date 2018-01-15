@@ -1,0 +1,10 @@
+{
+  "extends": "@workpop/eslint-config-workpop",
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/prop-types": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0
+  }
+}
