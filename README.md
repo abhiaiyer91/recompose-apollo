@@ -4,6 +4,17 @@ a utility belt for higher-order components in `apollo`. Recompose utilities for 
 
 ## Higher-order components
 
+### `withQueryData()`
+
+```js
+withQueryData(
+  queryDocument: DocumentNode,
+  optionsObject: { options: (props) => { variables } } | { options: Object }
+): HigherOrderComponent
+```
+
+Same functionality as `react-apollo` `graphql` HOC, except the `data` prop or named data prop is flattened.
+
 ### `withSubscribe()`
 
 ```js
