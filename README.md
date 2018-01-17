@@ -15,6 +15,39 @@ withQueryData(
 
 Same functionality as `react-apollo` `graphql` HOC, except the `data` prop or named data prop is flattened.
 
+### `withQueryComponent()`
+
+```js
+withQueryComponent(
+  queryDocument: DocumentNode,
+  optionsObject: { options: (props) => { variables } } | { options: Object }
+): Component
+```
+
+Return a query component given a GraphQL document and options. What's returned is a Component
+with a render `child` that has the data object from `react-apollo`, see below.
+
+Query Components outlined:
+https://dev-blog.apollodata.com/query-components-with-apollo-ec603188c157
+
+```js
+const CitiesQuery = withQueryComponent(cityQuery);
+
+function Sample() {
+  return (
+    <CitiesQuery>
+      {
+        (data) => {
+          return (
+            <p> I am loading? {data.loading ? 'Yes' : 'No'}
+          );
+        }
+      }
+    </CitiesQuery>
+  );
+}
+```
+
 ### `withSubscribe()`
 
 ```js
