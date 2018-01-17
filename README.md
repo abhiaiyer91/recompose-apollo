@@ -39,7 +39,7 @@ function Sample() {
       {
         (data) => {
           return (
-            <p> I am loading? {data.loading ? 'Yes' : 'No'}
+            <p> I am loading {data.loading ? 'Yes' : 'No'} </p>
           );
         }
       }
