@@ -1,6 +1,6 @@
 {
   "name": "recompose-apollo",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "Recompose HOCs utils for Apollo",
   "main": "lib/index.js",
   "author": "Abhi Aiyer",
