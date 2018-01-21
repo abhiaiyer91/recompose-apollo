@@ -48,6 +48,21 @@ function Sample() {
 }
 ```
 
+### `withFragment()`
+
+```js
+withFragment(
+  fragmentDocument: DocumentNode,
+  optionsObject: {
+    name: string,
+    getFragmentId: (props) => string,
+  }
+): HigherOrderComponent
+```
+
+After a query has been made with the `graphql` HOC, use this HOC to read fragments from the Apollo Client cache. Based on the options `name`, the fragment data will be returned to the component as props under that key or `data`.
+
+
 ### `withSubscribe()`
 
 ```js
